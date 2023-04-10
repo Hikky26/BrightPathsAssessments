@@ -10,6 +10,7 @@
 */
 
 //CODE HERE
+let gitDefinition = "It is a version control system tht keeps track of the changed made to files overtime. It helps with saving older versions of the code without losing and wasting time if some goes wrong."
 
 //////////////////PROBLEM 2////////////////////
 /*
@@ -18,6 +19,7 @@
 */
 
 //CODE HERE
+gitHubDefinition = "It is a platform that stores code and it uses Git to store the versions of that code. Increases collaboration adn shareability."
 
 //////////////////PROBLEM 3////////////////////
 /*
@@ -26,6 +28,7 @@
 */
 
 //CODE HERE
+gitInitDefinition = "initializes a repository in a directory."
 
 //////////////////PROBLEM 4////////////////////
 /*
@@ -34,6 +37,7 @@
 */
 
 //CODE HERE
+gitCloneDefinition ="Makes acopy of a git repository, including all the files and the history."
 
 //////////////////PROBLEM 5////////////////////
 /*
@@ -42,6 +46,7 @@
 */
 
 //CODE HERE
+gitStatusDefinition ="Displays the current status of the repository"
 
 //////////////////PROBLEM 6////////////////////
 /*
@@ -53,18 +58,21 @@
 */
 
 //CODE HERE
+gitAddDefinition = "Adds files to the repository"
+gitAddCode = "git add ."
 
 //////////////////PROBLEM 7////////////////////
 /*
     Create a variable called 'gitCommitDefinition'.  
     It should be a string containing your best definition of what 'git commit' does.
 
-    Create a variable called 'gitCommitCode'.  
+    Create a variable called 'gitCommwitCode'.  
     It should be a string containing the code to commit using the message "initial commit".
 */
 
 //CODE HERE
-
+gitCommitDefinition = "it takes a snapshot of the repsitory"
+gitCommwitCode ="git init commit"
 
 //////////////////PROBLEM 8////////////////////
 /*
@@ -73,3 +81,4 @@
 */
 
 //CODE HERE
+gitPushDefinition =" pushes the snapshot of changes to the git repository."

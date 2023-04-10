@@ -50,7 +50,25 @@ const pinkPrice = .55
 */
 
 // CODE HERE
+//make total variables
+let totalAcres = 0;
+let totalFuji = 0;
+let totalGala = 0;
+let totalPink = 0;
 
+//make for loops to calculate total 
+for(i=0; i<fujiAcres.length; i++){
+    totalFuji += fujiAcres[i];
+}
+for(i=0; i<galaAcres.length; i++){
+    totalGala += galaAcres[i];
+}for(i=0; i<pinkAcres.length; i++){
+    totalPink += pinkAcres[i];
+}
+
+//now add each variety total and log it out
+totalAcres = totalFuji + totalGala + totalPink;
+console.log(`Total amount of acres picked during the week: ${totalAcres}`)
 
 
 
@@ -68,6 +86,9 @@ const pinkPrice = .55
 */
 
 // CODE HERE
+//to get the evarage take the total and divide by the total count of values in each array. thus using length
+let averageDailyAcres = totalAcres/(fujiAcres.length + galaAcres.length + pinkAcres.length);
+console.log(`The average amount of acres picked per day: ${averageDailyAcres}`)
 
 
 
@@ -106,7 +127,13 @@ let acresLeft = 174
 let days = 0
 
 // CODE HERE
+//increment each day by one and subtract the number of acres.
+while(acresLeft > 0){
+    days ++
+    acresLeft -= averageDailyAcres
+}
 
+console.log(`Days of work left: ${days}`)
 
 
 // PROBLEM 4
@@ -135,9 +162,27 @@ let days = 0
 
 // CODE HERE
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+let fujiTons = [];
+let galaTons = [];
+let pinkTons = [];
+
+//similar to above code for total. but this time with every acre calculation, the values is multiplied by 6.5 and pushed to new array
+for(i=0; i < fujiAcres.length; i++){
+    let acre = 0;
+    fujiTons.push(fujiAcres[i] * 6.5)
+}
+for(i=0; i < galaAcres.length; i++){
+    let acre = 0;
+    galaTons.push(galaAcres[i] * 6.5)
+}
+for(i=0; i < pinkAcres.length; i++){
+    let acre = 0;
+    pinkTons.push(pinkAcres[i] * 6.5)
+}
+console.log(`Daily pick in tons: ${fujiTons}`)
+console.log(`Daily pick in tons: ${galaTons}`)
+console.log(`Daily pick in tons: ${pinkTons}`)
+
 
 
 
@@ -162,11 +207,24 @@ let days = 0
 
 // CODE HERE 
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
+let fujiPounds = 0
+let galaPounds = 0
+let pinkPounds = 0
 
+//did the array iteration to get the total multiplied by 2000
 
+for(i=0; i<fujiTons.length; i++){
+    fujiPounds += fujiTons[i] * 2000;
+}
+for(i=0; i<galaTons.length; i++){
+    galaPounds += galaTons[i] *2000;
+}
+for(i=0; i<galaTons.length; i++){
+    pinkPounds += pinkTons[i] *2000;
+}
+console.log(`Fuji weight in lbs: ${fujiPounds}`)
+console.log(`Gala weight in lbs: ${galaPounds}`)
+console.log(`Pink weight in lbs: ${pinkPounds}`)
 
 
 
@@ -189,10 +247,14 @@ let days = 0
 
 // CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+//multiply each total punds by the price
+let fujiProfit = fujiPrice * fujiPounds
+let galaProfit = galaPrice * galaPounds
+let pinkProfit = pinkPrice * pinkPounds
 
+console.log(`Total profit for fuji: ${fujiProfit}`)
+console.log(`Total profit for gala: ${galaProfit}`)
+console.log(`Total profit for pink: ${pinkProfit}`)
 
 
 
@@ -209,3 +271,5 @@ let days = 0
 */
 
 // CODE HERE
+let totalProfit = fujiProfit + galaProfit + pinkProfit
+console.log(`Total profit is: ${totalProfit}`)
